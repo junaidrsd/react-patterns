@@ -1,0 +1,27 @@
+{
+  "name": "react-patterns",
+  "version": "1.0.0",
+  "description": "Reusable components library",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/junaidrsd/react-patterns.git"
+  },
+  "keywords": [
+    "react",
+    "components",
+    "patterns"
+  ],
+  "author": "Junaid Rasheed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/junaidrsd/react-patterns/issues"
+  },
+  "homepage": "https://github.com/junaidrsd/react-patterns#readme",
+  "dependencies": {
+    "react": "^16.8.6"
+  }
+}
