@@ -4,6 +4,7 @@ import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
 import Checkbox from './';
 
+
 class Parent extends React.Component {
 
   constructor(props) {
