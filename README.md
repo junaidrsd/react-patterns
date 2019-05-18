@@ -33,7 +33,7 @@ class Application extends Component {
 ```
 checkbox
 |-- Checkbox
-``
+```
 
 ## Developement and contribution process
 
