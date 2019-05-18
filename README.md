@@ -19,11 +19,27 @@ import React, {Component} from 'react';
 import { Checkbox } from 'react-patterns';
 
 class Application extends Component {
+  state = {
+    checked: false,
+  };
+
+  handleChange = (e) => {
+    if(e.target.checked) {
+      // do something
+    }
+    this.setState({ checked: !this.state.checked })
+  }
+
   render() {
     return (
       <div>
         <H1>Hello World</H1>
-        <Checkbox />
+        <Checkbox
+          id="chk-1"
+          label="basic checkbox"
+          checked={this.state.checked}
+          onChange={(e) => handleChange(e)}
+        />
       </div>)
   }
 }
