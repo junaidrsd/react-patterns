@@ -2,7 +2,7 @@
   "name": "react-patterns",
   "version": "1.0.0",
   "description": "Reusable components library",
-  "main": "index.js",
+  "main": "dist/main.js",
   "scripts": {
     "build": "webpack --mode production",
     "test": "npm run test",
