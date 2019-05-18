@@ -2,10 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Checkbox from './';
 
-storiesOf('Button', module)
-  .add('with text', () => (
-    <button>Hello Button</button>
+storiesOf('Checkbox', module)
+  .add('Basic Checkbox', () => (
+    <Checkbox />
   ))
-  .add('with emoji', () => (
-    <span role="img" aria-label="so cool">😀 😎 👍 💯</span>
-  ));

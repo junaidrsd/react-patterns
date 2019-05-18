@@ -1,8 +1,24 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
+/*
+ Render a checkbox with label
+*/
 
 const Checkbox = () => {
   return (
-    <div>Welcome from component library</div>
+    <div className="te-checkbox">
+      <input type="checkbox" />
+    </div>
   );
 }
 
+Checkbox.propTypes = {
+  children: PropTypes.node,
+};
+
+Checkbox.defaultProps = {
+  children: null
+};
+
+export default Checkbox;
