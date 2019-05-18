@@ -2,7 +2,7 @@
 
 Reusable React component library that supports storybook driven development.
 
-## Using library in Project
+## Using components in Project
 
 
 # Using from git

@@ -11,15 +11,16 @@ const Checkbox = (props) => {
   };
   return (
     <div className="te-checkbox">
-      <label htmlFor={props.id}>
-        <input
-          id={props.id}
-          name={props.id}
-          type="checkbox"
-          checked={props.checked}
-          onChange={(e) => onChange(e)}
-          disabled={props.disabled}
-          />
+      <input
+        id={props.id}
+        name={props.id}
+        type="checkbox"
+        checked={props.checked}
+        onChange={(e) => onChange(e)}
+        disabled={props.disabled}
+        className="te-checkbox__input"
+      />
+      <label className="te-checkbox__label" htmlFor={props.id}>
         {props.label}
       </label>
     </div>
