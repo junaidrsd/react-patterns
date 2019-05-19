@@ -1,26 +1,26 @@
-## Developement and contribution process
+# Developement and contribution process
 
 ```
 npm install
 ```
 
-# Start developing with Storybook
+## Start developing with Storybook
 
 ```
 npm run storybook
 ```
 
-# Running test
+## Running test
 
 ```
 npm run test
 ```
 
-# Build the library
+## Build the library
 ```
 npm run build
 ```
-## Link react-patterns npm package to your project environment
+## Develop in your project environment
 
 In react-patterns root enter
 ```

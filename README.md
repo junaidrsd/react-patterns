@@ -51,9 +51,3 @@ class Application extends Component {
   }
 }
 ```
-
-# Contents
-```
-checkbox
-|-- Checkbox
-```
