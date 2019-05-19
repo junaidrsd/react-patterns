@@ -36,8 +36,8 @@ body {
       height: 28px; }
     .te-checkbox__input:checked + label::after {
       opacity: 1;
-      width: 13px;
-      height: 6px;
+      width: 16px;
+      height: 9px;
       transition: height .2s,width .2s .2s; }
     .te-checkbox__input:disabled + label::before {
       background-color: #f2f2f2;
