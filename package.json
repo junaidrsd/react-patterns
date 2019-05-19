@@ -11,7 +11,8 @@
     "storybook": "start-storybook  -p 9001 -c .storybook",
     "version": "npm run build && git add -f dist/",
     "postversion": "npm run release",
-    "release": "git push --tags && git commit -a --amend --no-edit && git push"
+    "release": "git push --tags && git commit -a --amend --no-edit && git push",
+    "build-storybook": "build-storybook -s public"
   },
   "repository": {
     "type": "git",
