@@ -17,6 +17,8 @@ And use it!
 ```
 import React, {Component} from 'react';
 import { Checkbox } from 'react-patterns';
+import 'react-patterns/dist/styles.css';
+
 
 class Application extends Component {
   state = {

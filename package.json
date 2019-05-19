@@ -26,9 +26,9 @@
   },
   "homepage": "https://github.com/junaidrsd/react-patterns#readme",
   "peerDependencies": {
+    "prop-types": "^15.7.2",
     "react": "* || ^16.8.6",
-    "react-dom": "* || ^16.8.6",
-    "prop-types": "^15.7.2"
+    "react-dom": "* || ^16.8.6"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
@@ -37,6 +37,7 @@
     "@babel/polyfill": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "@storybook/addon-actions": "^5.0.11",
+    "@storybook/addon-centered": "^5.0.11",
     "@storybook/addon-info": "^5.0.11",
     "@storybook/react": "^5.0.11",
     "babel-jest": "^24.8.0",
@@ -44,6 +45,7 @@
     "css-loader": "^2.1.1",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.13.0",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^24.8.0",
     "mini-css-extract-plugin": "^0.6.0",
     "node-sass": "^4.12.0",

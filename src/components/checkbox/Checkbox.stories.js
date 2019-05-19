@@ -1,7 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
+import { action, configureActions } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
+import centered from '@storybook/addon-centered/react';
 import Checkbox from './';
 
 
@@ -15,7 +16,7 @@ class Parent extends React.Component {
   }
 
   handleChange = (e) => {
-    action('Checkbox clicked');
+    action('checkbox-click');
     this.setState({ checked: !this.state.checked});
   }
 
@@ -34,12 +35,12 @@ class Parent extends React.Component {
 }
 
 storiesOf('Checkbox', module)
-  .add('Basic checkbox', withInfo()(() => (
-    <Parent id="chk-3" />
-  )))
-  .add('Checked Checkbox', withInfo()(() => (
-    <Checkbox id="chk-2" label="Baic checkbox" checked />
-  )))
-  .add('I am disabled', withInfo()(() => (
-    <Checkbox id="chk-2" label="I am disabled" disabled />
-  )))
+  .addDecorator(centered)
+  .addDecorator(withInfo)
+  .add('Checkbox with different states', () => (
+    <div>
+      <Parent id="chk-4" />
+      <Checkbox id="chk-5" label="Checked checkbox" checked />
+      <Checkbox id="chk-6" label="I am disabled" disabled />
+    </div>
+  ))

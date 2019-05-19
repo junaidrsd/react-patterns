@@ -1,4 +1,74 @@
 .te-checkbox {
-  width: 30px;
-  height: 30px; }
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  font-family: "Pebble",Arial,sans-serif;
+  cursor: pointer;
+  font-size: 1.6rem;
+  position: relative; }
+  .te-checkbox__input {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0; }
+    .te-checkbox__input:checked + label::before {
+      background-color: #990ae3;
+      border: none;
+      width: 28px;
+      height: 28px; }
+    .te-checkbox__input:checked + label::after {
+      opacity: 1;
+      width: 13px;
+      height: 6px;
+      transition: height .2s,width .2s .2s; }
+    .te-checkbox__input:disabled + label::before {
+      background-color: #f2f2f2;
+      border: none; }
+  .te-checkbox__label {
+    padding: 0 0 0 40px;
+    line-height: 2.9rem; }
+    .te-checkbox__label:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 26px;
+      height: 26px;
+      border: 1px solid #c5c5c5;
+      background-color: #fff;
+      border-radius: 4px;
+      cursor: pointer; }
+    .te-checkbox__label:after {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 14px;
+      width: 3px;
+      height: 3px;
+      border-radius: 2px;
+      border-bottom: 3px solid #ffffff;
+      border-left: 3px solid #ffffff;
+      transform: rotate(-45deg);
+      transform-origin: top left;
+      opacity: 0;
+      transition: height 0s,width 0s;
+      cursor: pointer; }
+  .te-checkbox input:disabled + label {
+    opacity: 0.4; }
+  .te-checkbox:hover input:disabled + label .ea-checkbox__icon {
+    border-color: #f2f2f2; }
+
+html {
+  font-size: 62.5%; }
+
+/* font-size: 62.5% now means that 1.0 rem = 10px */
+body {
+  font-family: Helvetica, Roboto, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0; }
 

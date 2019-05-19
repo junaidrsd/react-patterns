@@ -34,4 +34,9 @@ module.exports = {
 
   // Indicates whether each individual test should be reported during the run
   verbose: false,
+
+  moduleNameMapper: {
+    "\\.(css|scss)$": "identity-obj-proxy",
+  },
+
 };
