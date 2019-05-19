@@ -1,6 +1,6 @@
 {
   "name": "react-patterns",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Reusable components library",
   "main": "dist/main.js",
   "scripts": {
