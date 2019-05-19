@@ -23,8 +23,8 @@ $te-color-gray: #f2f2f2;
     }
     &:checked+label::after {
       opacity: 1;
-      width: 13px;
-      height: 6px;
+      width: 16px;
+      height: 9px;
       transition: height .2s,width .2s .2s;
     }
     &:disabled+label::before {
