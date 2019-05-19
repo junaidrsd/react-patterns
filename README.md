@@ -4,12 +4,17 @@ Reusable React component library that supports storybook driven development.
 
 ## Using components in Project
 
-
-# Using from git
-* Include the library to your package.json dependencies:
+Install using NPM
 
 ```
-"react-patterns": "git+ssh://git+https://github.com/junaidrsd/react-patterns.git"
+npm install git+https://github.com/junaidrsd/react-patterns.git
+```
+or
+
+Add into package.json in dependencies section
+
+```
+"react-patterns": "git+https://github.com/junaidrsd/react-patterns.git"
 ```
 
 And use it!
@@ -52,38 +57,3 @@ class Application extends Component {
 checkbox
 |-- Checkbox
 ```
-
-## Developement and contribution process
-
-```
-npm install
-```
-
-# Start developing with Storybook
-
-```
-npm run storybook
-```
-
-# Running test
-
-```
-npm run test
-```
-
-# Release the library
-```
-npm run build
-```
-## Link react-patterns npm package to consumer's environment
-
-In react-patterns root enter
-```
-npm link
-```
-Once it returns a linked string then from app project enter the following command
-```
-npm link react-patterns
-```
-
-
