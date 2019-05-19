@@ -3,36 +3,46 @@ import { shallow } from 'enzyme';
 import Checkbox from './Checkbox';
 
 describe('<Checkbox />', () => {
+  let wrapper;
+  beforeEach(()=> {
+    wrapper = shallow(<Checkbox id="chk-1" label="Basic checkbox" />);
+  });
 
   it('is a valid component', () => {
-    const wrapper = shallow(<Checkbox id="chk-1" label="Basic checkbox" />);
-    expect(wrapper.find('input')).toHaveLength(1);
-    expect(wrapper.find('label').exists).toBeTruthy();
+    expect(wrapper.hasClass('te-checkbox')).toBe(true);
+    expect(wrapper.find('.te-checkbox__input')).toHaveLength(1);
+    expect(wrapper.find('.te-checkbox__label').exists).toBeTruthy();
   });
 
   it('renders input with id', () => {
-    const wrapper = shallow(<Checkbox id="chk-1" label="Basic checkbox" />);
     expect(wrapper.find('input').prop('id')).toBe('chk-1');
   });
 
-  it('renders input with label', () => {
-    const wrapper = shallow(<Checkbox id="chk-1" label="Basic checkbox" />);
+  it('renders label for input', () => {
     expect(wrapper.find('[htmlFor="chk-1"]')).toHaveLength(1);
   });
 
-  it('Renders unchecked checkbox', () => {
-    const wrapper = shallow(<Checkbox id="chk-1" label="Unchecked checkbox" />);
-    expect(wrapper.find('input').checked).toBe(undefined);
+  it('renders unchecked checkbox', () => {
+    expect(wrapper.find('.te-checkbox__input').checked).toBe(undefined);
   });
 
-  it('Renders correctly checked checkbox', () => {
-    const wrapper = shallow(<Checkbox id="chk-1" label="Checked checkbox" checked />);
-    expect(wrapper.find('input').prop('checked')).toBe(true);
+  it('renders correctly checked checkbox', () => {
+    wrapper.setProps({ checked: true });
+    expect(wrapper.find('.te-checkbox__input').prop('checked')).toBe(true);
   });
 
-  it('Renders disabled checkbox', () => {
-    const wrapper = shallow(<Checkbox id="chk-1" label="Checked checkbox" disabled />);
-    expect(wrapper.find('input').prop('disabled')).toBe(true);
+  it('renders disabled checkbox', () => {
+    wrapper.setProps({ disabled: true });
+    expect(wrapper.find('.te-checkbox__input').prop('disabled')).toBe(true);
+  });
+
+  it('simulates onChange events', () => {
+    const onCheckboxClick = jest.fn();
+    const event = { target: { checked: true } };
+    wrapper.setProps({ onChange: onCheckboxClick });
+    wrapper.find('.te-checkbox__input').simulate('change', event);
+    expect(onCheckboxClick).toBeCalled();
+    expect(onCheckboxClick).toHaveBeenLastCalledWith(event);
   });
 
 });
